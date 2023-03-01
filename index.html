@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Pomodoro Clock 🍅🕐</h1>
+    </header>
+    <br>
+    <section>
+        <div class="painel">
+            <p id="work" class="active">Trabalho</p>
+            <p id="break">Intervalo</p> 
+        </div>
+        
+        <div id="timer">
+            <div class="circle">
+                <p id="clock">25:00</p>
+            </div>
+        </div>
+        <div id="actions">
+            <button id="iniciar" value="iniciar" onclick="iniciar()">▶ Iniciar</button>
+            <button id="parar" value="parar" onclick="parar()">◼ Parar</button>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; JSam Soluções</p>
+    </footer>
+    <script src="script.js"></script>
+    
+</body>
+</html>
