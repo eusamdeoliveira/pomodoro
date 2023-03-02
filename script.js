@@ -41,7 +41,7 @@ function pausar() {
 }
 
 function mudarBotaoIniciarPausar() {
-  document.getElementById('actions').innerHTML = estadoMapper[estadoAtual]
+  document.getElementById('samara').innerHTML = estadoMapper[estadoAtual]
 }
 
 function parar() {
