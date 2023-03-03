@@ -29,25 +29,22 @@ const abaMapper = {
 
 function mudarAba() {
   document.getElementsByClassName('painel')[0].innerHTML = abaMapper[abaAtual]
+  updateDisplayTimer(buildTimer(time))
 }
 
 function trabalho() {
   abaAtual = 1
+  time = workTime 
   mudarAba()
-  console.log("trabalho")
 }
 
 function intervalo() {
   abaAtual = 2
+  time = breakTime
   mudarAba()
 }
 
 function iniciar() {
-  if (abaAtual = 1) {
-    time = workTime 
-  } else {
-    time = breakTime
-  }
   atualizarTimer(time)
   setTimeout(() => {
     clearTimeout(interval)
@@ -73,7 +70,6 @@ function mudarBotaoIniciarPausar() {
 }
 function pararWork() {
   clearInterval(interval)
-  interval = time
   updateDisplayTimer(buildTimer(workTime))
   estadoAtual = 1
   mudarBotaoIniciarPausar()
@@ -87,6 +83,7 @@ function pararBreak() {
   }
 
 function parar() {
+  console.log(abaAtual)
   if (abaAtual = 1) {
     pararWork()
   } else {
