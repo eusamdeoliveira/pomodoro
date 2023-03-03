@@ -1,12 +1,26 @@
+:root {
+    --color-red: rgb(186, 73, 73);
+    --color-orange: rgb(186, 107, 73);
+    --color-white: antiquewhite;
+    --color-purewhite: white;
+    --color-green: #03CE8E;
+    --color-lightgreen: #00f3a6;
+    --color-tranlucentwhite : rgba(250, 235, 215, 0.783);
+
+}
+
+
+
+
 body {
-    background: linear-gradient(90deg,rgb(252, 34, 0),rgb(205, 112, 78)) ;
+    background: linear-gradient(90deg, var(--color-red),var(--color-orange)) ;
     font: normal 15pt Arial;
     margin: 0px;
 }
 header {
-    color: rgb(252, 34, 0);
+    color: var(--color-red);
     text-align: center;
-    background-color:antiquewhite;
+    background-color:var(--color-white);
     border: none;
     display: flex;
     justify-content: center;
@@ -15,7 +29,28 @@ header {
     height: 65px;
     padding: 0px;
     margin: 0px;
+}
 
+div.darkmode {
+    display: flex;
+    justify-content: flex-end ;
+    -webkit-box-flex-group: inherit;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    position: absolute;
+    left: 80vw;
+}
+
+button#dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-green);
+    width: 50px;
+    height: 50px;
+    border-color: var(--color-green);
+    border-radius: 5px;
+    font-size: 20pt;
 }
 
 section {
@@ -36,18 +71,18 @@ div.painel{
     margin-top: 0px;
     margin-bottom: 10px;   
     border-radius: 40px;
-    background-color: rgb(252, 34, 0) ;
+    background-color: var(--color-red) ;
     position: relative;
     width: 350px;
     height: 60px;
-    box-shadow: 0px 0px 10px 8px rgba(250, 235, 215, 0.783);
+    box-shadow: 0px 0px 15px 2px var(--color-tranlucentwhite);
 }
 
 .painel button {
-    background-color: rgb(252, 34, 0) ;
+    background-color: var(--color-red) ;
     border: 0px;
     font: normal Arial;
-    color:white;
+    color: var(--color-purewhite);
     font-size: 18pt;
     font-weight: bolder;
     opacity: .9;
@@ -56,7 +91,7 @@ div.painel{
 
 .painel button.active {
     opacity: 1;
-    color: rgb(163, 246, 203);
+    color: var(--color-lightgreen);
 
 }
 
@@ -67,9 +102,9 @@ div.circle{
     width: 16rem;
     height: 16rem;
     border-radius: 50%;
-    box-shadow: 0px 0px 15px 10px rgba(250, 235, 215, 0.936);
+    box-shadow: 0px 0px 20px 5px var(--color-tranlucentwhite);
     margin: 10px;
-    background-color: rgba(252, 57, 27, 0.566);
+    background-color: var(--color-red);
 
 }
 
@@ -81,7 +116,7 @@ div.circle{
     border-radius: 50%;
     border-style: solid;
     border-width: 8px;
-    border-color: antiquewhite;
+    border-color: var(--color-white);
 }
 
 div#timer{
@@ -91,7 +126,7 @@ div#timer{
     position: relative;
     padding: 10px;
     font: normal Arial;
-    color:antiquewhite;
+    color: var(--color-white);
     font-size: 48pt;
     font-weight: bolder;
 }
@@ -103,19 +138,19 @@ div#actions{
 }
 
 #actions button {
-    color: antiquewhite;
+    color: var(--color-white);
     font-weight: bold;
     font-size: 20pt;
-    background-color: rgb(1, 223, 108);
+    background-color: var(--color-green);
     border-radius: 5px;
-    border-color: rgb(1, 223, 108);
+    border-color: var(--color-green);
     width: 170px;
     height: 60px;
     margin: 5px;
 }
 
 footer {
-    color: antiquewhite;
+    color: var(--color-white);
     text-align: center;
     font-style: italic;
 }

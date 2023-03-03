@@ -1,23 +1,24 @@
 :root {
     --color-red: rgb(244, 56, 27);
     --color-gray: rgb(50, 57, 53);
-    --color-darkgreen: rgb(23, 50, 34);
-    --color-black: rgb(42, 46, 43);
+    --color-darkgreen: rgb(39, 63, 54);
+    --color-black: rgb(42, 46, 44);
     --color-white: white;
-    --color-green: rgb(2, 146, 72);
+    --color-green: rgb(59, 164, 129);
     --color-tranlucentwhite : rgba(250, 235, 215, 0.783);
 
 }
+
 body {
-    background: linear-gradient(90deg, var(--color-black), var(--color-darkgreen));
+    background: linear-gradient(90deg, var(--color-black), var(--color-gray));
     font: normal 15pt Arial;
     margin: 0px;
 
 }
+
 header {
     color: var(--color-red);
     text-align: center;
-    background-color:var(--color-gray);
     border: none;
     display: flex;
     justify-content: center;
@@ -26,20 +27,19 @@ header {
     height: 65px;
     padding: 0px;
     margin: 0px;
-    /* box-shadow: 0px 0px 15px 2px var(--color-green);  */
-
 }
 
 div.darkmode {
     display: flex;
     justify-content: flex-end ;
     -webkit-box-flex-group: inherit;
-    margin-top: 5px;
+    margin-top: 20px;
     margin-bottom: 0px;
-    margin-right: 200px;
+    position: absolute;
+    left: 80vw;
 }
 
-button#dark {
+button#light {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,7 +73,7 @@ div.painel{
     position: relative;
     width: 350px;
     height: 60px;
-    box-shadow: 0px 0px 15px 2px var(--color-green);
+    box-shadow: 0px 0px 15px 0.5px var(--color-green);
 }
 
 .painel button {
@@ -100,7 +100,7 @@ div.circle{
     width: 16rem;
     height: 16rem;
     border-radius: 50%;
-    box-shadow: 0px 0px 15px 5px var(--color-green);
+    box-shadow: 0px 0px 20px 3px var(--color-green);
     margin: 10px;
     background-color: var(--color-black);
 
@@ -151,7 +151,6 @@ footer {
     color: var(--color-white);
     text-align: center;
     font-style: italic;
-    background-color: var(--color-gray);
     padding: 15px;
 
 }
