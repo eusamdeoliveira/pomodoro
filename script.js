@@ -1,11 +1,12 @@
 const tempoAtualizacao = 1000
 let interval;
-let abaAtual = 0 
-let time = 25*60*1000
-
+let abaAtual = 2 
+let workTime = 25*60*1000
+let breakTime = 5*60*1000
+let time
 let currentTime;
-
 let estadoAtual = 1
+
 
 /**
  * 1: Iniciar
@@ -15,11 +16,38 @@ let estadoAtual = 1
 
 const estadoMapper = {
   1: `<button id="iniciar" value="iniciar" onclick="iniciar()">▶ Iniciar</button>`,
-  2: `<button id="pausar" value="pausar" onclick="pausar()">⏸ Pausar</button>`,
+  2: `<button id="pausar" value="pausar" onclick="pausar()"> <img src="pause.png" alt="pause"> Pausar</button>`,
   3: `<button id="continuar" value="continuar" onclick="continuar()">▶ Iniciar</button>`,
 }
 
+const abaMapper = {
+  1: `<button id="work" class="active" onclick="trabalho()">Trabalho</button>
+     <button id="break" onclick="intervalo()">Intervalo</button>`,
+  2: `<button id="work" onclick="trabalho()">Trabalho</button>
+     <button id="break" class="active" onclick="intervalo()">Intervalo</button>`,
+}
+
+function mudarAba() {
+  document.getElementsByClassName('painel')[0].innerHTML = abaMapper[abaAtual]
+}
+
+function trabalho() {
+  abaAtual = 1
+  mudarAba()
+  console.log("trabalho")
+}
+
+function intervalo() {
+  abaAtual = 2
+  mudarAba()
+}
+
 function iniciar() {
+  if (abaAtual = 1) {
+    time = workTime 
+  } else {
+    time = breakTime
+  }
   atualizarTimer(time)
   setTimeout(() => {
     clearTimeout(interval)
@@ -43,14 +71,27 @@ function pausar() {
 function mudarBotaoIniciarPausar() {
   document.getElementById('samara').innerHTML = estadoMapper[estadoAtual]
 }
-
-function parar() {
-  clearTimeout(interval)
-  updateDisplayTimer('Samara')
+function pararWork() {
+  clearInterval(interval)
+  interval = time
+  updateDisplayTimer(buildTimer(workTime))
+  estadoAtual = 1
+  mudarBotaoIniciarPausar()
 }
 
-function mudarAba(aba) {
-  abaAtual = aba 
+function pararBreak() {
+  clearInterval(interval)
+  updateDisplayTimer(buildTimer(breakTime))
+  estadoAtual = 1
+  mudarBotaoIniciarPausar()
+  }
+
+function parar() {
+  if (abaAtual = 1) {
+    pararWork()
+  } else {
+    pararBreak()
+  }
 }
 
 function atualizarTimer(period) {
@@ -78,8 +119,6 @@ function to2DigR(number) {
 function buildTimer(time) {
   const minutes = time / 60000
   const seconds = (minutes - Math.floor(minutes)) * 60
-
-  console.log(minutes, seconds)
 
   return `${to2DigF(minutes)}:${to2DigR(seconds)}`
   // return `${Math.round(minutes).toString().padStart(2, 0)}:${Math.round(seconds).toString().padStart(2, 0)}`

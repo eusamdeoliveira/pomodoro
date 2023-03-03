@@ -35,10 +35,6 @@ div.painel{
     justify-content: space-around;
     margin-top: 0px;
     margin-bottom: 10px;   
-    font: normal Arial;
-    color:white;
-    font-size: 18pt;
-    font-weight: bolder;
     border-radius: 40px;
     background-color: rgb(252, 34, 0) ;
     position: relative;
@@ -47,12 +43,18 @@ div.painel{
     box-shadow: 0px 0px 10px 8px rgba(250, 235, 215, 0.783);
 }
 
-.painel p {
+.painel button {
+    background-color: rgb(252, 34, 0) ;
+    border: 0px;
+    font: normal Arial;
+    color:white;
+    font-size: 18pt;
+    font-weight: bolder;
     opacity: .9;
     transition: 1s ease-in;
 }
 
-.painel p.active {
+.painel button.active {
     opacity: 1;
     color: rgb(163, 246, 203);
 
@@ -100,7 +102,7 @@ div#actions{
     align-items: center;
 }
 
-button {
+#actions button {
     color: antiquewhite;
     font-weight: bold;
     font-size: 20pt;
