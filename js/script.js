@@ -31,8 +31,7 @@ function light(){
 
 function updateMode() {
     document.getElementsByClassName('darkmode')[0].innerHTML = modeMapper[modeAtual]
-    console.log(modeAtual)
-  }
+}
 
 const modeMapper = {
     1: `<button id="dark" onclick="dark()" >🌙</button>
