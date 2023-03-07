@@ -9,6 +9,8 @@ function mudarAba() {
   time = timeMapper[abaAtual]
   document.getElementsByClassName('painel')[0].innerHTML = abaMapper[abaAtual]
   updateDisplayTimer(buildTimer(time))
+  estadoAtual = 1
+  mudarBotaoIniciarPausar()
 }
 
 function trabalho() {

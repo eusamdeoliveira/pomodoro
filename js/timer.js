@@ -17,8 +17,8 @@ function atualizarTimer(period) {
   }, updateTime)
 }
 
-function updateDisplayTimer(text) {
-  document.getElementById('clock').innerHTML = text
+function updateDisplayTimer(ludibriar) {
+  document.getElementById('clock').innerHTML = ludibriar
 }
 
 function to2DigF(number) {
@@ -29,11 +29,9 @@ function to2DigR(number) {
   return Math.round(number).toString().padStart(2, 0)
 }
   
-  
 function buildTimer(time) {
   const minutes = time / 60000
   const seconds = (minutes - Math.floor(minutes)) * 60
-
   return `${to2DigF(minutes)}:${to2DigR(seconds)}`
   // return `${Math.round(minutes).toString().padStart(2, 0)}:${Math.round(seconds).toString().padStart(2, 0)}`
 }
