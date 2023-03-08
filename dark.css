@@ -1,26 +1,24 @@
 :root {
-    --color-red: rgb(186, 73, 73);
-    --color-orange: rgb(186, 107, 73);
-    --color-white: antiquewhite;
-    --color-purewhite: white;
-    --color-green: #03CE8E;
-    --color-lightgreen: #00f3a6;
+    --color-red: rgb(244, 56, 27);
+    --color-gray: rgb(50, 57, 53);
+    --color-darkgreen: rgb(39, 63, 54);
+    --color-black: rgb(42, 46, 44);
+    --color-white: white;
+    --color-green: rgb(59, 164, 129);
     --color-tranlucentwhite : rgba(250, 235, 215, 0.783);
 
 }
 
-
-
-
 body {
-    background: linear-gradient(90deg, var(--color-red),var(--color-orange)) ;
+    background: linear-gradient(90deg, var(--color-black), var(--color-gray));
     font: normal 15pt Arial;
     margin: 0px;
+
 }
+
 header {
     color: var(--color-red);
     text-align: center;
-    background-color:var(--color-white);
     border: none;
     display: flex;
     justify-content: center;
@@ -41,14 +39,14 @@ div.darkmode {
     left: 80vw;
 }
 
-button#dark {
+button#light {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-green);
+    background-color: var(--color-black);
     width: 50px;
     height: 50px;
-    border-color: var(--color-green);
+    border-color: var(--color-gray);
     border-radius: 5px;
     font-size: 20pt;
 }
@@ -71,18 +69,18 @@ div.painel{
     margin-top: 0px;
     margin-bottom: 10px;   
     border-radius: 40px;
-    background-color: var(--color-red) ;
+    background-color: var(--color-black) ;
     position: relative;
     width: 350px;
     height: 60px;
-    box-shadow: 0px 0px 15px 2px var(--color-tranlucentwhite);
+    box-shadow: 0px 0px 15px 0.5px var(--color-green);
 }
 
 .painel button {
-    background-color: var(--color-red) ;
+    background-color: var(--color-black) ;
     border: 0px;
     font: normal Arial;
-    color: var(--color-purewhite);
+    color: var(--color-white);
     font-size: 18pt;
     font-weight: bolder;
     opacity: .9;
@@ -91,7 +89,7 @@ div.painel{
 
 .painel button.active {
     opacity: 1;
-    color: var(--color-lightgreen);
+    color: var(--color-red);
 
 }
 
@@ -102,9 +100,9 @@ div.circle{
     width: 16rem;
     height: 16rem;
     border-radius: 50%;
-    box-shadow: 0px 0px 20px 5px var(--color-tranlucentwhite);
+    box-shadow: 0px 0px 20px 3px var(--color-green);
     margin: 10px;
-    background-color: var(--color-red);
+    background-color: var(--color-black);
 
 }
 
@@ -116,7 +114,7 @@ div.circle{
     border-radius: 50%;
     border-style: solid;
     border-width: 8px;
-    border-color: var(--color-white);
+    border-color: var(--color-red);
 }
 
 div#timer{
@@ -153,4 +151,6 @@ footer {
     color: var(--color-white);
     text-align: center;
     font-style: italic;
+    padding: 15px;
+
 }

@@ -4,34 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pomodoro</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Pomodoro 🍅🕐</title>
 </head>
 <body>
     <header>
         <h1>Pomodoro Clock 🍅🕐</h1>
     </header>
-    <br>
+    <div class="darkmode">
+        <button id="dark" onclick="dark()" >🌙</button>
+        <link rel="stylesheet" href="style.css">
+    </div>
     <section>
         <div class="painel">
-            <p id="work" class="active">Trabalho</p>
-            <p id="break">Intervalo</p> 
+            <button id="work" class="active" onclick="trabalho()">Trabalho</button>
+            <button id="break" onclick="intervalo()">Intervalo</button> 
         </div>
         
         <div id="timer">
             <div class="circle">
-                <p id="clock">25:00</p>
+                <p id="clock"></p>
             </div>
         </div>
         <div id="actions">
-            <button id="iniciar" value="iniciar" onclick="iniciar()">▶ Iniciar</button>
-            <button id="parar" value="parar" onclick="parar()">◼ Parar</button>
+            <div id="stateButtonContainer">
+                <button id="iniciar" value="iniciar" onclick="iniciar()">▶ Iniciar</button>
+            </div>
+            <button id="parar"   value="parar"   onclick="parar()">◼ Parar  </button>
         </div>
     </section>
     <footer>
         <p>&copy; JSam Soluções</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/aba.js"></script>
+    <script src="js/stateButtons.js"></script>
+    <script src="js/script.js"></script>
     
 </body>
 </html>
