@@ -39,3 +39,7 @@ const modeMapper = {
     2: `<button id="light" onclick="light()">☀️</button>
     <link rel="stylesheet" href="dark.css"></link>`
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById('clock').innerHTML = buildTimer(time)  
+})

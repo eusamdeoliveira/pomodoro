@@ -9,7 +9,7 @@ const timeMapper = {
 }
 
 function atualizarTimer(period) {
-  time = period
+  time = period - updateTime
   interval = setInterval(() => {
     const text = buildTimer(time)
     time -= updateTime
@@ -17,8 +17,8 @@ function atualizarTimer(period) {
   }, updateTime)
 }
 
-function updateDisplayTimer(ludibriar) {
-  document.getElementById('clock').innerHTML = ludibriar
+function updateDisplayTimer(text) {
+  document.getElementById('clock').innerHTML = text
 }
 
 function to2DigF(number) {
