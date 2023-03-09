@@ -9,7 +9,7 @@ const timeMapper = {
 }
 
 function atualizarTimer(period) {
-  time = period - updateTime
+  time = period
   interval = setInterval(() => {
     const text = buildTimer(time)
     time -= updateTime

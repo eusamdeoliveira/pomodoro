@@ -5,7 +5,7 @@ const estadoMapper = {
 }
 
 function iniciar() {
-  atualizarTimer(time)
+  atualizarTimer(time - updateTime)
   finalizarTimer()
   estadoAtual = 2
   mudarBotaoIniciarPausar()
@@ -24,7 +24,7 @@ function finalizarTimer() {
 }
 
 function continuar() {
-  atualizarTimer(time + updateTime)
+  atualizarTimer(time)
   estadoAtual = 2
   mudarBotaoIniciarPausar()
 }
